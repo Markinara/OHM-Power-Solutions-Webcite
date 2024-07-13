@@ -1,31 +1,33 @@
-<HTML>
-<BODY> 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container" >
+      <form class="form" action="userinfo.php" method="post">
+        <p class="title">Login</p>
+        <p class="message">Please insert your username and password below</p>
+        <label>
+          <input type="text" class="input" name="username" id="username" required>
+          <span>Username</span>
+        </label>
 
-<link rel="stylesheet" href="login.css">
-
-<div class="form-container" >
- <form class="form" action="userinfo.php" method="post">
-  <p class="title">Login</p>
- 
-
-  <div class="input-group">
-    <label for="username">Username</label>
-    <input type="text" name="username" id="username" placeholder="" required>
+          <label>
+            <input type="password" class="input" name="password" id="password" required>
+            <span>Password</span>
+          </label>
+          
+        <button class="submit">Sign in</button>
+        <p class="signup">Don't have an account?
+          <a  class="aa" href="signUp.html">Sign up</a>
+        </p>
+      </form>
   </div>
 
-  <div class="input-group">
-    <label for="password">password</label>
-    <input type="password" name="password" id="password" placeholder="" required>
-  </div>
-
-
-  <button type="submit" class="sign">Sign in</button>
- 
-  <p class="signup">Don't have an account?
-    <a  class="aa" href="signup.php">Sign up</a>
-  </p>
- </form>
-</div>
-
-</BODY>
-</HTML>
+</body>
+</html>
+  
