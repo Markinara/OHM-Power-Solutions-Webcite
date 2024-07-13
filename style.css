@@ -54,12 +54,12 @@ body {
     animation: pulse 1s linear infinite;
   }
   
-  .message, .signin {
+  .message, .signin, .signup {
     color: rgba(88, 87, 87, 0.822);
     font-size: 14px;
   }
   
-  .signin {
+  .signin, .signup {
     text-align: center;
     font-weight: bold;
   }
