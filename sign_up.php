@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO users (username, email, address, password) VALUES ('$username', '$email', '$address', '$password')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "<p>New user registered succsessfully! Welcome!</p>";
+        header("location: index.HTML");
     } else {
         echo "<p>Ошибка: " . $sql . "<br>" . $conn->error . "</p>";
     }
