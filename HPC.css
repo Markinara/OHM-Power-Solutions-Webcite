@@ -220,11 +220,14 @@ body {
     
 }
 
-
-
-
 /******************************************/
 /* Card component styling *//* Card component styling */
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3%;
+}
 .card {
     width: 300px; /* Adjust width as needed */
     height: 340px; /* Maintain aspect ratio */
