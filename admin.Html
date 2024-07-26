@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="HPC.css">
-        <title>Home page</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="HPC.css">
+    <title>Admin Page</title>
+</head>
 <body>
+
     <div class="parent">
         <div class="d">
             <img class="img1" src="Pics/LOGO UP .png">
@@ -15,8 +16,9 @@
         <div class="navbar">
             <ul class="ul">
                 <li class="li"><a class="a" href="HomePage.HTML">Home |</a></li>
-                <li class="li"><a class="a" href="products.html">Products |</a></li>
+                <li class="li"><a class="a" href="products.php">Products |</a></li>
                 <li class="li"><a class="a" href="cart.HTML">Cart |</a></li>
+                <li class="li"><a class="a" href="admin.html">Admin |</a></li>
                 <li class="li"><a class="a" href="index.HTML">Log Out</a></li>
             </ul>
         </div>
@@ -25,5 +27,30 @@
       <input type="text" placeholder="search...">
       <button class="but" type="submit">Search</button>
     </div>
+
+    <h1>Add Product</h1>
+
+    <form action="add_product.php" method="post" >
+        <label for="product_name">Product Name:</label>
+        <input type="text" id="product_name" name="prod_name" required><br>
+
+        <label for="product_description">Product Description:</label>
+        <textarea id="product_description" name="discription" required></textarea><br>
+
+        <label for="product_image">Product Image:</label>
+        <input type="file" id="product_image" name="picture" required><br>
+
+        <label for="product_quantity">Product Supplier:</label>
+        <input type="text" id="product_supplier" name="supplier" required><br>
+
+        <label for="product_quantity">Product Quantity:</label>
+        <input type="number" id="product_quantity" name="quantity" required><br>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" required><br>
+
+        <input type="submit" value="Add Product">
+    </form>
+
 </body>
 </html>

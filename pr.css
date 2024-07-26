@@ -220,155 +220,95 @@ body {
     
 }
 
-
-
-
 /******************************************/
-/* Card component styling *//* Card component styling */
-.card {
-    width: 300px; /* Adjust width as needed */
-    height: 340px; /* Maintain aspect ratio */
-    margin: 20px;
-    perspective: 1500px;
-    float: left; /* Ensures cards are displayed horizontally */
+/* Styling for card wrapper */
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }
 
-.content {
+/* Styling for each card */
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.8s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card .content {
     position: relative;
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+    transition: transform 0.8s;
 }
 
-.more:checked ~ .content {
+.card .content:hover {
     transform: rotateY(180deg);
 }
 
-.front,
-.back {
+.card .front,
+.card .back {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    transform-style: preserve-3d;
-    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.inner {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    justify-items: center;
-    align-content: center;
-    gap: 10px;
-    padding: 20px;
-    transform: translateZ(80px) scale(0.94);
-    height: 100%;
-}
-
-.front {
+.card .front {
     background-size: cover;
     background-position: center;
-    /* Adjust other styles as needed */
 }
 
-.front h2 {
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #fff;
-    font-weight: 500;
-    text-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
-}
-
-.back {
+.card .back {
     transform: rotateY(180deg);
-    background-color: #27ba38; /* Green background */
-    border: 2px solid #f0f0f0;
+    background-color: #f0f0f0;
+    color: #333;
 }
 
-.description {
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1.4;
-    color: #fff; /* White text */
-    padding-right: 10px;
-    overflow-y: auto; /* Enable scrollbar for long descriptions */
+.card .back .inner {
+    padding: 20px;
 }
 
-.location,
-.price {
-    font-weight: 600;
-    color: #fff; /* White text */
-    font-size: 14px;
-    height: 14px;
+.card .back p {
+    margin-bottom: 10px;
 }
 
-.button {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
+.card .back .return {
     cursor: pointer;
-    display: block;
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.card .back .return:hover {
+    color: #0056b3;
+}
+
+.card .back button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
     padding: 10px 20px;
-    background-color: transparent;
-    border: 2px solid #e1dada;
-    color: #27ba38; /* Green */
-    border-radius: 4px;
-    text-align: center;
-    transition: background-color 0.3s, box-shadow 0.3s, text-shadow 0.3s, color 0.3s;
-    height: 40px;
-    margin-top: 20px; /* Adjust spacing */
-}
-
-.button:hover {
-    background-color: #fff;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-    text-shadow: none;
-    color: #27ba38; /* Green */
-}
-
-.return {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
     cursor: pointer;
-    display: none; /* Initially hide the return button */
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #27ba38; /* Green */
-    border-radius: 4px;
-    text-align: center;
-    transition: background-color 0.3s, box-shadow 0.3s, text-shadow 0.3s, color 0.3s;
-    height: 40px;
+    transition: background-color 0.3s;
 }
 
-.card:hover .return {
-    display: block; /* Display return button on hover */
-}
-
-.return:hover {
-    background-color: #fff;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-    text-shadow: none;
-    color: #27ba38; /* Green */
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-    width: 5px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #27ba38; /* Green */
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #1d9a2d; /* Darker green */
+.card .back button:hover {
+    background-color: #0056b3;
 }
