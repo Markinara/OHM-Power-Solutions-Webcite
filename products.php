@@ -54,8 +54,8 @@
                 <div class="card">
                     <div class="content">
                         <div class="front" style="background-image: url('<?php echo $row['picture']; ?>');"></div>
-                        <div class="back">
-                            <div class="inner">
+                        <div class="back" style="background-color: #27ba38">
+                            <div class="inner" >
                                 <h2><?php echo $row['prod_name']; ?>name:</h2>
                                 <div class="location"><?php echo $row['quantity']; ?></div>
                                 <div class="price">$<?php echo $row['price']; ?></div>
