@@ -74,7 +74,10 @@
                                 <td><?php echo htmlspecialchars($row['supplier']); ?></td>
                                 <td><?php echo htmlspecialchars($row['quantity']); ?></td>
                                 <td>$<?php echo htmlspecialchars($row['price']); ?></td>
-                                <td class="table-action-cell"><button class="edit-button" onclick="showEditForm(<?php echo $row['prod_code']; ?>)">Edit</button></td>
+                                <td class="table-action-cell">
+                                    <button class="edit-button" onclick="showEditForm(<?php echo $row['prod_code']; ?>)">Edit</button>
+                                    <button class="delete-button" onclick="deleteItem(<?php echo $row['prod_code']; ?>)">Delete</button>
+                                </td>
                             </tr>
                             <?php
                         }
@@ -96,7 +99,7 @@
                     <input type="text" id="product_name" name="prod_name" required><br>
 
                     <label for="product_description">Product Description:</label>
-                    <textarea id="product_description" name="discription" required></textarea><br>
+                    <textarea id="product_description" name="description" required></textarea><br>
 
                     <label for="product_image">Product Image:</label>
                     <input type="file" id="product_image" name="picture" required><br>
@@ -120,8 +123,8 @@
                     <input type="hidden" id="edit-product-id" name="prod_code">
                     <label for="edit-prod_name">Product Name:</label>
                     <input type="text" id="edit-prod_name" name="prod_name" required><br>
-                    <label for="edit-discription">Description:</label>
-                    <textarea id="edit-discription" name="discription" required></textarea><br>
+                    <label for="edit-description">Description:</label>
+                    <textarea id="edit-description" name="description" required></textarea><br>
                     <label for="product_image">Product Image:</label>
                     <input type="file" id="product_image" name="picture" required><br>
                     <label for="edit-supplier">Supplier:</label>

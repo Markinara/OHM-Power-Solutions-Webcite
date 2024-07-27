@@ -413,38 +413,93 @@ footer {
 }
 /*************************************************************/
 /*admin css*/
+/* Контейнер для таблицы */
+.table-container {
+    max-width: 1200px; /* Устанавливает максимальную ширину контейнера таблицы */
+    margin: 0 auto; /* Центрирует контейнер по горизонтали */
+    padding: 20px; /* Добавляет отступы по краям контейнера */
+}
+
 /* Стиль для таблицы */
 table {
-    width: 90%; /* Устанавливает ширину таблицы относительно ширины страницы */
-    max-width: 1200px; /* Максимальная ширина таблицы */
-    margin: 20px auto; /* Центрирует таблицу по горизонтали */
+    width: 100%; /* Устанавливает ширину таблицы относительно контейнера */
     border-collapse: collapse;
     font-size: 16px;
     text-align: center; /* Центрирует текст в таблице */
+    margin: 0 auto; /* Центрирует таблицу внутри контейнера */
 }
 
-thead {
-    background-color: #f4f4f4;
-}
-
+/* Заголовки и ячейки таблицы */
 th, td {
-    padding: 12px 15px;
+    padding: 10px;
     border: 1px solid #ddd;
+    box-sizing: border-box; /* Учитывает границы и отступы в расчете ширины */
+
 }
 
+/* Стиль для заголовков таблицы */
 th {
     background-color: #27ba38; /* Зеленый фон для заголовков */
     color: white; /* Белый текст */
+    height: 50px;
+}
+/* Стиль для ячеек таблицы */
+td {
+    text-align: center; /* Выравнивание текста по верхнему краю для лучшего вида со скроллом */
+    
 }
 
+/* Фиксированные размеры для столбцов */
+th:nth-child(1), td:nth-child(1) {
+    width: 200px; /* Ширина первого столбца */
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 10px; /* Ширина второго столбца */
+    max-height: 100px; /* Фиксированная высота для второго столбца */
+    overflow-y: auto; /* Вертикальная прокрутка для второго столбца */
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 250px; /* Ширина третьего столбца */
+}
+
+th:nth-child(4), td:nth-child(4) {
+    width: 150px; /* Ширина четвертого столбца */
+}
+
+th:nth-child(5), td:nth-child(5) {
+    width: 100px; /* Ширина пятого столбца */
+}
+th:nth-child(6), td:nth-child(6) {
+    width: 100px; /* Ширина шестого столбца */
+}
+
+th:nth-child(7), td:nth-child(7) {
+    width: 400px; /* Ширина седьмого столбца */
+}
+
+/* Обеспечивает выравнивание текста в столбце описания по левому краю */
+td:nth-child(2) {
+    width: 420px;
+    max-height: 100px; /* Максимальная высота ячейки с описанием */
+    overflow-y: auto;
+    text-align: left; /* Выравнивание текста влево для лучшего чтения */
+    display: block; /* Перенос текста */
+    word-wrap: break-word; /* Перенос длинных слов */
+
+}
+
+/* Стили для строк таблицы */
 tbody tr:nth-child(even) {
     background-color: #f9f9f9; /* Светло-серый фон для четных строк */
 }
 
 tbody tr:hover {
-    background-color: #f1f1f1; /* Фон для строки при наведении курсора */
+    background-color: #f1f1f1; /* Фон строки при наведении курсора */
 }
 
+/* Заголовок страницы */
 h1 {
     text-align: center;
     margin: 20px 0;
@@ -452,60 +507,62 @@ h1 {
     font-size: 24px;
 }
 
-td {
-    vertical-align: middle;
-}
-
 /* Стили для кнопки редактирования */
 .edit-button {
     background-color: #27ba38;
     color: white;
     border: none;
-    padding: 6px 20px;
+    padding: 6px 16px;
     cursor: pointer;
     display: none; /* Скрываем кнопку по умолчанию */
     text-align: center;
 }
 
-/* Показать кнопку при наведении на строку */
+.edit-button:hover{
+    background-color: #1d8529;
+}
+
+/* Показываем кнопку редактирования при наведении на строку */
 tr:hover .edit-button {
     display: inline-block;
 }
+
+/* Стили для кнопки удаления */
+.delete-button {
+    background-color: #27ba38; /* Красный фон для кнопки удаления */
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    cursor: pointer;
+    display: none; /* Скрываем кнопку по умолчанию */
+    text-align: center;
+    margin-left: 10px; /* Отступ от кнопки редактирования */
+}
+
+.delete-button:hover{
+    background-color: #dc3545;
+}
+
+
+/* Показать кнопку удаления при наведении на строку */
+tr:hover .delete-button {
+    display: inline-block;
+}
+
 
 /* Стили для строки таблицы */
 tr {
     position: relative;
 }
-
 /* Центрирование содержимого ячейки */
 .table-action-cell {
     text-align: center;
-    vertical-align: middle;
-}
-
-/* Стили для контейнера страницы */
-.page-container {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
-    margin-top: 2em;
 }
 
-/* Стили для таблицы */
-.table-container {
-    flex: 1;
-    max-width: 1200px; /* Максимальная ширина таблицы */
-    margin: 20px auto; /*   ентрирует таблицу по горизонтали */
-    border-collapse: collapse;
-    font-size: 16px;
-    text-align: center; /*   ентрирует текст в таблице */
-}
-
-/* Стили для формы редактирования */
+/* Стили для формы редактирования и добавления */
 .edit-form {
-    flex: 0 0 400px; /* Увеличиваем ширину формы */
+    flex: 0 0 600px; /* Увеличиваем ширину формы */
     display: none;
     padding: 20px;
     margin-left: 10px; /* Минимальное расстояние между формой и таблицей */
@@ -513,14 +570,14 @@ tr {
 
 .form-container {
     display: flex;
+    flex-direction: row; /* Располагает элементы по вертикали */
     justify-content: center;
     align-items: center;
     gap: 20px; 
     padding: 20px;
     margin-top: 2em; 
 }
-
-/* Form styling */
+/* Формы */
 form {
     max-width: 600px;
     width: 100%;
@@ -529,11 +586,19 @@ form {
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
 }
 
 .add-form,
 .edit-form {
-    flex: 1;
+    width: 100%;
+    max-width: 600px; /* Максимальная ширина формы */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 form h2 {
@@ -541,9 +606,9 @@ form h2 {
     color: #27ba38; /* Зеленый цвет заголовка формы */
 }
 
-h2{
+h2 {
     color: #27ba38; /* Зеленый цвет заголовка формы */
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 form label {
@@ -566,9 +631,8 @@ form input[type="file"] {
 
 form textarea {
     height: 100px;
-    resize: vertical; /* Allows resizing only vertically */
+    resize: vertical; /* Позволяет изменение размера только вертикально */
 }
-
 form input[type="submit"] {
     background-color: rgb(39, 186, 56);
     color: #fff;
