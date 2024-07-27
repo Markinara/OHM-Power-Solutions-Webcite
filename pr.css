@@ -382,6 +382,7 @@ th, td {
 th {
     background-color: #27ba38; /* Зеленый фон для заголовков */
     color: white; /* Белый текст */
+    height: 50px;
 }
 
 /* Стиль для ячеек таблицы */
@@ -392,7 +393,7 @@ td {
 
 /* Фиксированные размеры для столбцов */
 th:nth-child(1), td:nth-child(1) {
-    width: 150px; /* Ширина первого столбца */
+    width: 200px; /* Ширина первого столбца */
 }
 
 th:nth-child(2), td:nth-child(2) {
@@ -402,7 +403,7 @@ th:nth-child(2), td:nth-child(2) {
 }
 
 th:nth-child(3), td:nth-child(3) {
-    width: 150px; /* Ширина третьего столбца */
+    width: 250px; /* Ширина третьего столбца */
 }
 
 th:nth-child(4), td:nth-child(4) {
