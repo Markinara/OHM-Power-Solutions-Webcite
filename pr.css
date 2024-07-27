@@ -216,6 +216,7 @@ body {
 }
 
 /* Styling for card wrapper */
+/* Styling for card wrapper */
 .wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -285,12 +286,16 @@ body {
     background-color: #fff;
 }
 
-.card .back .description {
-    max-height: 150px; /* Adjust max height as needed */
-    overflow-y: auto;
-    padding: 10px;
-    border: 1px solid #ccc;
+.description {
+    grid-row: 5;
+    grid-column: 1 / -1;
+    font-size: 0.86em;
     border-radius: 5px;
+    font-weight: 600;
+    line-height: 1.4em;
+    overflow: auto;
+    color: black;
+    padding-right: 10px;
 }
 
 .card .back .quantity {
@@ -326,14 +331,26 @@ body {
     text-align: center;
     border-radius: 5px;
 }
+.form7{
+    background-color: #fff;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+}
 
 .card .back .return:hover {
     background-color: darkgreen;
 }
+.txt{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
 
+}
 
-.card .back button {
-    background-color: #27ba38;
+.remove{
+    grid-row: 4;
+    grid-column: 1;
+    background-color: rgb(39, 186, 56);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -346,11 +363,223 @@ body {
     border-radius: 5px;
 }
 
-.card .back .return:hover {
-    background-color: darkgreen;
+footer {
+    text-align: center; /* Center the text inside the footer */
+    margin-top: 20px;  /* Space above the footer */
+    padding: 10px;     /* Padding for aesthetics */
+    background-color:#fff; /* Optional background color */
+    position: relative; /* Ensure relative positioning */
+    width: 100%; /* Full width */
+    bottom: 0; /* Align to the bottom */
+    border: none;
 }
-.txt{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: black;
 
+.price {
+    display: flex; /* Use flexbox to center the price */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+    margin-top: 20px; /* Space above the price */
+}
+
+.h3 {
+    color: #27ba38; /* Зеленый цвет заголовка формы */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    align-self: center; /* Center the text vertically if inside a flex container */
+}
+.quantity {
+    background-color: #fff; /* White background */
+    padding: 10px; /* Padding for spacing */
+    margin-bottom: 10px; /* Margin at the bottom */
+    border: none; /* No border */
+}
+
+.quantity-form {
+    margin-bottom: 10px; /* Margin at the bottom */
+    background-color: #fff;
+    border: none;
+}
+
+.remove-button {
+    background-color: #fff; /* White background */
+    padding: 10px; /* Padding for spacing */
+    border: none; /* No border */
+    
+}
+
+.remove-form {
+    margin-top: 10px; /* Margin at the top */
+    background-color: #fff;
+    border: none;
+}
+/*************************************************************/
+/*admin css*/
+/* Стиль для таблицы */
+table {
+    width: 90%; /* Устанавливает ширину таблицы относительно ширины страницы */
+    max-width: 1200px; /* Максимальная ширина таблицы */
+    margin: 20px auto; /* Центрирует таблицу по горизонтали */
+    border-collapse: collapse;
+    font-size: 16px;
+    text-align: center; /* Центрирует текст в таблице */
+}
+
+thead {
+    background-color: #f4f4f4;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #27ba38; /* Зеленый фон для заголовков */
+    color: white; /* Белый текст */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Светло-серый фон для четных строк */
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1; /* Фон для строки при наведении курсора */
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #27ba38; /* Зеленый цвет заголовка */
+    font-size: 24px;
+}
+
+td {
+    vertical-align: middle;
+}
+
+/* Стили для кнопки редактирования */
+.edit-button {
+    background-color: #27ba38;
+    color: white;
+    border: none;
+    padding: 6px 20px;
+    cursor: pointer;
+    display: none; /* Скрываем кнопку по умолчанию */
+    text-align: center;
+}
+
+/* Показать кнопку при наведении на строку */
+tr:hover .edit-button {
+    display: inline-block;
+}
+
+/* Стили для строки таблицы */
+tr {
+    position: relative;
+}
+
+/* Центрирование содержимого ячейки */
+.table-action-cell {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Стили для контейнера страницы */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 2em;
+}
+
+/* Стили для таблицы */
+.table-container {
+    flex: 1;
+    max-width: 1200px; /* Максимальная ширина таблицы */
+    margin: 20px auto; /*   ентрирует таблицу по горизонтали */
+    border-collapse: collapse;
+    font-size: 16px;
+    text-align: center; /*   ентрирует текст в таблице */
+}
+
+/* Стили для формы редактирования */
+.edit-form {
+    flex: 0 0 400px; /* Увеличиваем ширину формы */
+    display: none;
+    padding: 20px;
+    margin-left: 10px; /* Минимальное расстояние между формой и таблицей */
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+    padding: 20px;
+    margin-top: 2em; 
+}
+
+/* Form styling */
+form {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.add-form,
+.edit-form {
+    flex: 1;
+}
+
+form h2 {
+    margin-bottom: 20px;
+    color: #27ba38; /* Зеленый цвет заголовка формы */
+}
+
+h2{
+    color: #27ba38; /* Зеленый цвет заголовка формы */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form textarea,
+form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+form textarea {
+    height: 100px;
+    resize: vertical; /* Allows resizing only vertically */
+}
+
+form input[type="submit"] {
+    background-color: rgb(39, 186, 56);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #218838;
 }
