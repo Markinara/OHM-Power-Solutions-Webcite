@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute()) {
         echo "New product added successfully";
-        header("Location: admin.html");
+        header("Location: admin.Html");
         exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
