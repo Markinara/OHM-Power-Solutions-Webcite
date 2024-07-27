@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $product_price = $_POST['price'];
 
     // Загрузка изображения
-    $target_dir = "Pics/";
+    $target_dir = "Pics/products/";
     $target_file = $target_dir . basename($_FILES["picture"]["name"]);
     move_uploaded_file($_FILES["picture"]["tmp_name"], $target_file);
 
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute()) {
         echo "New product added successfully";
-        header("Location: admin.html");
+        header("Location: admin.php");
         exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;

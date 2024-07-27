@@ -1,16 +1,16 @@
 /* Reset styles */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
 }
 
 /* Body styling */
 body {
     background-color: #fff;
     font-family: Arial, sans-serif;
-    
 }
 
 /* Parent container styling */
@@ -62,7 +62,6 @@ body {
     padding: 14px 16px;
 }
 
-
 /* Anchor link styling */
 .a {
     display: block;
@@ -78,7 +77,6 @@ body {
     color: #fff;
     border-radius: 6px; /* Rounded corners for hover effect */
 }
-
 
 /* Search container styling */
 .search-container {
@@ -107,7 +105,7 @@ body {
     border-color: #333; /* Darker border on focus */
 }
 
-.but{
+.but {
     margin-left: 5%;
     width: 22%;
     height: 2em;
@@ -118,32 +116,30 @@ body {
     cursor: pointer;
 }
 
-.mid{
+.mid {
     background-image: url(Pics/BAKGRN-3.png);
     width: 100%;
     height: 18em;
     background-size: cover;
     margin-top: 1%;
-
 }
-.m{
-    width:fit-content;
+
+.m {
+    width: fit-content;
     margin-left: 15%;
 }
 
-.h1{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 300;
     font-size: 40px;
 }
 
-.c{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.c {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 200;
     font-size: 25px;
-
 }
-
 
 /* Container styling */
 .l {
@@ -185,26 +181,26 @@ body {
 .icon-text {
     text-align: center;
     font-size: 1em; /* Adjust font size as needed */
-    border-top: 2px solid black ;
+    border-top: 2px solid black;
 }
 
-.foot{
+.foot {
     background-image: url(Pics/GREY.png);
     padding: 20px; /* Add some padding for spacing */
     width: fit-content;
     background-size: cover;
 }
 
-.foot .h2{
+.foot .h2 {
     margin-left: 13%;
     margin-top: 3%;
 }
-.foot .p2{
+
+.foot .p2 {
     margin-left: 13%;
-    
 }
 
-.button{
+.button {
     margin-left: 13%;
     margin-top: 1em;
     background-color: rgb(39, 186, 56);
@@ -217,10 +213,8 @@ body {
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
-    
 }
 
-/******************************************/
 /* Styling for card wrapper */
 .wrapper {
     display: flex;
@@ -311,4 +305,145 @@ body {
 
 .card .back button:hover {
     background-color: #0056b3;
+}
+
+/* Form container styling */
+.form-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.page-title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-top: 4em; /* Space between navbar and form */
+}
+
+/* Form styling */
+form {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form textarea,
+form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+label{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form textarea {
+    height: 100px;
+    resize: vertical; /* Allows resizing only vertically */
+}
+
+form input[type="submit"] {
+    background-color: rgb(39, 186, 56);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Стиль для таблицы */
+table {
+    width: 90%; /* Устанавливает ширину таблицы относительно ширины страницы */
+    max-width: 1200px; /* Максимальная ширина таблицы */
+    margin: 20px auto; /* Центрирует таблицу по горизонтали */
+    border-collapse: collapse;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center; /* Центрирует текст в таблице */
+}
+
+thead {
+    background-color: #f4f4f4;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #27ba38; /* Зеленый фон для заголовков */
+    color: white; /* Белый текст */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Светло-серый фон для четных строк */
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1; /* Фон для строки при наведении курсора */
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #27ba38; /* Зеленый цвет заголовка */
+    font-size: 24px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+td {
+    vertical-align: middle;
+}
+
+button {
+    background-color: #27ba38; /* Зеленая кнопка */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #1f9a26; /* Более темный зеленый при наведении */
+}
+
+.edit-form {
+    display: none; /* Скрыть форму по умолчанию */
+    position: absolute; /* Чтобы форма могла быть выровнена по экрану */
+    background: white; /* Фон формы */
+    border: 1px solid #ccc; /* Рамка формы */
+    padding: 20px; /* Отступы внутри формы */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* Тень для формы */
+    z-index: 1000; /* Убедитесь, что форма отображается поверх других элементов */
 }
