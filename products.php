@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="pr.css">
-    <title>Home page</title>
+    <title>Products Page</title>
 </head>
 <body>
     <div class="parent">
@@ -16,12 +16,13 @@
             <ul class="ul">
                 <li class="li"><a class="a" href="HomePage.HTML">Home |</a></li>
                 <li class="li"><a class="a" href="products.php">Products |</a></li>
-                <li class="li"><a class="a" href="cart.html">Cart |</a></li>
+                <li class="li"><a class="a" href="cart.php">Cart |</a></li>
                 <li class="li"><a class="a" href="admin.php">Admin |</a></li>
                 <li class="li"><a class="a" href="index.HTML">Log Out</a></li>
             </ul>
         </div>
     </div>
+    
     <div class="search-container">
         <input type="text" placeholder="search...">
         <button class="but" type="submit">Search</button>
@@ -54,27 +55,30 @@
                 <div class="card">
                     <div class="content">
                         <div class="front" style="background-image: url('<?php echo $row['picture']; ?>');"></div>
-                        <div class="back" style="background-color: #27ba38">
-                            <div class="inner" >
-                                <h2><?php echo $row['prod_name']; ?>name:</h2>
-                                <div class="location"><?php echo $row['quantity']; ?></div>
-                                <div class="price">$<?php echo $row['price']; ?></div>
-                                <p class="description"><?php echo $row['discription']; ?></p>
-                                <button type="checkbox" for="more" class="return">Add to card</button>
+                        <div class="back">
+                            <h2 class="txt">Name: <?php echo $row['prod_name']; ?></h2>
+                            <div class="description">
+                                <p class="txt"><?php echo $row['discription']; ?></p>
                             </div>
+                            <div class="quantity"><p class="txt">Quantity: <?php echo $row['quantity']; ?></p></div>
+                            <div class="price"><p class="txt">Price: $<?php echo $row['price']; ?></p></div>
+                            <form action="cart.php" method="post">
+                            <input type="hidden" name="prod_code" value="<?php echo htmlspecialchars($row['prod_code']); ?>">
+                            <button type="submit" name="add_to_cart" class="return">Add to Cart</button>
+                            </form>
                         </div>
                     </div>
                 </div>
                 <?php
             }
         } else {
-            echo "0 results";
+            echo "<p>No products found.</p>";
         }
 
         // Close connection
         $conn->close();
         ?>
     </div>
-
+    
 </body>
 </html>

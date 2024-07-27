@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                             // Redirect user to appropriate page based on admin status
                             if ($is_admin) {
-                                header("location: admin.HTML");
+                                header("location: admin.php");
                             } else {
                                 header("location: HomePage.HTML");
                             }
