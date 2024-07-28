@@ -399,18 +399,49 @@ footer {
     border: none;
 }
 
-.remove-button {
-    background-color: #fff; /* White background */
-    padding: 10px; /* Padding for spacing */
-    border: none; /* No border */
-    
+.buyb{
+    display: flex; /* Use flexbox to center the price */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+    margin-top: 20px; /* Space above the price */
 }
 
-.remove-form {
-    margin-top: 10px; /* Margin at the top */
-    background-color: #fff;
+.bd{
+    display: flex; /* Use flexbox to center the price */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+    margin-top: 20px; /* Space above the price */
+    width: 150px;
+    margin-left: 45%;
     border: none;
+    background-color: #fff;
 }
+.buy{
+    background-color: rgb(39, 186, 56);
+    color: #fff;
+    border: none;
+    padding: 8px 15px; /* Adjust padding to make the button smaller */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.8em; /* Adjust font-size to make the button text smaller */
+    text-align: center;
+    border-radius: 5px;
+    width: 100px;
+}
+
+.remove-form{
+    display: flex; /* Use flexbox to center the price */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+    margin-top: 20px; /* Space above the price */
+    width: 150px;
+    border: none;
+    background-color: #fff;
+}
+
+
 /*************************************************************/
 /*admin css*/
 /* Контейнер для таблицы */
