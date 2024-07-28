@@ -102,9 +102,8 @@
                                         <form action="" method="post" class="quantity-form">
                                             <input type="hidden" name="prod_code" value="<?php echo htmlspecialchars($product_id); ?>">
                                             <label>Quantity: </label>
-                                            <input type="number" name="quantity" value="<?php echo $quantity; ?>" min="1">
+                                            <input name="quantity" value="<?php echo $quantity; ?>" min="1">
                                             <input type="hidden" name="update_cart" value="1">
-                                            <button type="submit" class="update-button">Update</button>
                                         </form>
                                     </div>
 
@@ -148,9 +147,7 @@
                     <button type="submit" class="buy-button">Buy Now</button>
                 </form>
 
-                <form action="" method="post" class="clear-form">
-                    <button type="submit" class="clear-button" name="clear_cart">Clear Cart</button>
-                </form>
+                
             <?php endif; ?>
         </footer>
     </div>
