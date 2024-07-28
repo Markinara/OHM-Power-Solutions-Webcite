@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
 }
 
 /* Body styling */
@@ -38,11 +37,12 @@ body {
 
 /* Navbar styling */
 .navbar {
+    position: relative;
     width: calc(100% - 15vw); /* Adjust width dynamically */
     height: 4em;
     display: flex;
     align-items: center;
-    padding-left: 1em; /* Padding to separate from logo */
+    padding-left: 2em; /* Padding to separate from logo */
     background-image: url('Pics/UP HEAD.png');
     background-size: cover; /* Ensure the background image covers the area */
 }
@@ -53,7 +53,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    margin-left: auto; /* Align the list to the right */
+    margin-left: 0; /* Align the list to the left */
 }
 
 /* List item styling */
@@ -67,32 +67,31 @@ body {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 12px; /* Use smaller padding */
     text-decoration: none;
+    border-radius: 4px; /* Set the border-radius */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .a:hover {
-    background-color: #555; /* Slightly lighter background on hover */
+    background-color: #2e8b57; /* Dark green background on hover */
     color: #fff;
-    border-radius: 6px; /* Rounded corners for hover effect */
 }
 
 /* Search container styling */
 .search-container {
-    width: 28%;
-    padding: 0.2em; /* Padding for spacing */
-    justify-content: center; /* Center align the search input */
-    background-color: lightgrey; /* Light grey background */
-    margin-left: 71.9%;
-    margin-top: 0.2%;
+    position: absolute;
+    right: 1em;
+    display: flex;
+    align-items: center;
+    background-color: lightgrey;
+    padding: 0.2em;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-/* Search input styling */
 .search-container input {
-    width: 70%; /* Adjust width as needed */
+    width: 200px; /* Set a fixed width */
     padding: 0.2em 0.2em;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -107,7 +106,7 @@ body {
 
 .but {
     margin-left: 5%;
-    width: 22%;
+    width: 80px; /* Set a fixed width */
     height: 2em;
     background-color: rgb(39, 186, 56);
     color: #fff;
@@ -118,15 +117,18 @@ body {
 
 .mid {
     background-image: url(Pics/BAKGRN-3.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
     height: 18em;
-    background-size: cover;
     margin-top: 1%;
 }
 
 .m {
     width: fit-content;
-    margin-left: 15%;
+    margin-left: 13%;
+    
 }
 
 .h1 {
@@ -143,9 +145,14 @@ body {
 
 /* Container styling */
 .l {
+    background-image: url(Pics/BAKGRN-copy.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 20px; /* Add some padding for spacing */
-    margin-left: 13%;
     width: fit-content;
+    margin-top: 1%;
+
 }
 
 /* Paragraph styling */
@@ -184,24 +191,33 @@ body {
     border-top: 2px solid black;
 }
 
-.foot {
-    background-image: url(Pics/GREY.png);
+.about-us {
+    background-image: url('Pics/PIC123.png');
+    margin-top: 1%;
     padding: 20px; /* Add some padding for spacing */
-    width: fit-content;
-    background-size: cover;
+    width: 100%; /* Make the div span the full width of the page */
+    background-size: cover; /* Make the background image cover the entire div */
+    background-position: center; /* Center the background image */
+    text-align: center; /* Center-align the text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
-.foot .h2 {
-    margin-left: 13%;
+.about-us .h2 {
     margin-top: 3%;
+    font-size: 2em; /* Adjust the font size as needed */
 }
 
-.foot .p2 {
-    margin-left: 13%;
+.about-us .p2 {
+    font-weight: bold; /* Make the paragraph bold */
+    margin-top: 1em;
+    font-size: 1.2em; /* Adjust the font size as needed */
 }
 
 .button {
-    margin-left: 13%;
     margin-top: 1em;
     background-color: rgb(39, 186, 56);
     color: #fff;

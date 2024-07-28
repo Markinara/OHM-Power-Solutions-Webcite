@@ -22,12 +22,11 @@
                 <li class="li"><a class="a" href="admin.php">Admin |</a></li>
                 <li class="li"><a class="a" href="index.HTML">Log Out</a></li>
             </ul>
+            <div class="search-container">
+                <input type="text" placeholder="Enter a details">
+                <button class="but" type="submit">Search</button>
+            </div>
         </div>
-    </div>
-    
-    <div class="search-container">
-        <input type="text" placeholder="search...">
-        <button class="but" type="submit">Search</button>
     </div>
 
     <h1>All Products</h1>

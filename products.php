@@ -9,28 +9,25 @@
 </head>
 
 <body>
-    <header>
-        <div class="parent">
-            <div class="d">
-                <img class="img1" src="Pics/LOGO UP .png" alt="Logo">
+    <div class="parent">
+        <div class="d">
+            <img class="img1" src="Pics/LOGO UP .png">
+        </div>
+        
+        <div class="navbar">
+            <ul class="ul">
+                <li class="li"><a class="a" href="HomePage.HTML">Home |</a></li>
+                <li class="li"><a class="a" href="products.php">Products |</a></li>
+                <li class="li"><a class="a" href="cart.php">Cart |</a></li>
+                <li class="li"><a class="a" href="admin.php">Admin |</a></li>
+                <li class="li"><a class="a" href="index.HTML">Log Out</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" placeholder="Enter a details">
+                <button class="but" type="submit">Search</button>
             </div>
-
-            <nav class="navbar">
-                <ul class="ul">
-                    <li class="li"><a class="a" href="HomePage.HTML">Home |</a></li>
-                    <li class="li"><a class="a" href="products.php">Products |</a></li>
-                    <li class="li"><a class="a" href="cart.php">Cart |</a></li>
-                    <li class="li"><a class="a" href="admin.php">Admin |</a></li>
-                    <li class="li"><a class="a" href="index.HTML">Log Out</a></li>
-                </ul>
-            </nav>
         </div>
-
-        <div class="search-container">
-            <input type="text" name="search" placeholder="Search...">
-            <button class="but" type="submit">Search</button>
-        </div>
-    </header>
+    </div>
 
     <div class="wrapper">
         <?php
