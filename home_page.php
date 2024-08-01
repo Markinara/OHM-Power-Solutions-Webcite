@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="pr.css">
+    <script href="script.js"></script>
     <title>Home page</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
                 <li class="li"><a class="a" href="HomePage.HTML">Home |</a></li>
                 <li class="li"><a class="a" href="products.php">Products |</a></li>
                 <li class="li"><a class="a" href="cart.php">Cart |</a></li>
-                <li class="li"><a class="a" href="admin.php">Admin |</a></li>
+                <li class="li"><a class="a" onclick="adminCheck(<?php echo $row['isAdmin']; ?>)">Admin |</a></li>
                 <li class="li"><a class="a" href="index.HTML">Log Out</a></li>
             </ul>
             <div class="search-container">

@@ -67,6 +67,7 @@ body {
     display: block;
     color: white;
     text-align: center;
+    padding-bottom: 1em;
     padding: 10px 12px; /* Use smaller padding */
     text-decoration: none;
     border-radius: 4px; /* Set the border-radius */
@@ -123,25 +124,26 @@ body {
     width: 100%;
     height: 18em;
     margin-top: 1%;
+
 }
 
 .m {
-    width: fit-content;
-    margin-left: 13%;
+    text-align: left;
+    padding-left: 13%;
+    padding-top: 2%;
+}
+
+.patiah{
+    padding-left: 13%;
     
 }
 
-.h1 {
+.h1 .m {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 300;
     font-size: 40px;
 }
 
-.c {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: 200;
-    font-size: 25px;
-}
 
 /* Container styling */
 .l {
@@ -149,8 +151,8 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 20px; /* Add some padding for spacing */
-    width: fit-content;
+    padding: 10px; /* Add some padding for spacing */
+    width: 100%;
     margin-top: 1%;
 
 }
@@ -194,27 +196,32 @@ body {
 .about-us {
     background-image: url('Pics/PIC123.png');
     margin-top: 1%;
-    padding: 20px; /* Add some padding for spacing */
+    padding: 10px; /* Add some padding for spacing */
     width: 100%; /* Make the div span the full width of the page */
+    height: 18em;
     background-size: cover; /* Make the background image cover the entire div */
     background-position: center; /* Center the background image */
-    text-align: center; /* Center-align the text */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
-.about-us .h2 {
-    margin-top: 3%;
+.au {
+    margin-top: 1.75%;
     font-size: 2em; /* Adjust the font size as needed */
+    color: #27ba38; /* Зеленый цвет заголовка формы */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 4em;
+    text-align: center;
 }
 
-.about-us .p2 {
+.p2 {
     font-weight: bold; /* Make the paragraph bold */
     margin-top: 1em;
     font-size: 1.2em; /* Adjust the font size as needed */
+    text-align: left;
 }
 
 .button {
@@ -380,10 +387,10 @@ body {
 }
 
 footer {
-    text-align: center; /* Center the text inside the footer */
+    text-align: right; /* Center the text inside the footer */
     margin-top: 20px;  /* Space above the footer */
     padding: 10px;     /* Padding for aesthetics */
-    background-color:#fff; /* Optional background color */
+    background-color: #27ba38; /* Optional background color */
     position: relative; /* Ensure relative positioning */
     width: 100%; /* Full width */
     bottom: 0; /* Align to the bottom */
@@ -656,6 +663,9 @@ form h2 {
 h2 {
     color: #27ba38; /* Зеленый цвет заголовка формы */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
 }
 
 form label {
@@ -693,4 +703,13 @@ form input[type="submit"] {
 
 form input[type="submit"]:hover {
     background-color: #218838;
+}
+
+/* Cart */
+
+.empty-cart {
+    align-items: center;
+    font-size: x-large;
+    color: #27ba38;
+    margin-top: 20%;
 }
