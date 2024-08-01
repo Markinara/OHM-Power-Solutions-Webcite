@@ -1,10 +1,17 @@
+<?php
+session_start();
+$is_admin = isset($_SESSION["is_admin"]) && $_SESSION["is_admin"] === true;
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="pr.css">
-    <script href="script.js"></script>
     <title>Home page</title>
 </head>
 <body>
@@ -15,10 +22,12 @@
         
         <div class="navbar">
             <ul class="ul">
-                <li class="li"><a class="a" href="HomePage.HTML">Home |</a></li>
+                <li class="li"><a class="a" href="home_page.php">Home |</a></li>
                 <li class="li"><a class="a" href="products.php">Products |</a></li>
                 <li class="li"><a class="a" href="cart.php">Cart |</a></li>
-                <li class="li"><a class="a" onclick="adminCheck(<?php echo $row['isAdmin']; ?>)">Admin |</a></li>
+                <?php if ($is_admin): ?>
+                    <li class="li"><a class="a" href="admin.php">Admin |</a></li>
+                <?php endif; ?>
                 <li class="li"><a class="a" href="index.HTML">Log Out</a></li>
             </ul>
             <div class="search-container">
@@ -50,6 +59,14 @@
             </div>
         </div>
     </div>
+
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Redirect to the personal information page
+        header("Location: dev.php");
+        exit();
+    }
+    ?>
     
     <h2 class="au">ABOUT US</h2>
     <div class="about-us">
@@ -63,7 +80,9 @@
             • Mechanical Accuracy.<br><br>
             Nothing ignored – everything considered.
         </p>
-        <button class="button" type="submit">Learn more</button>
+        <form action="" method="post" class="bd2">
+            <button class="button2" type="submit">Learn more</button>
+        </form>
     </div>
     
     <footer>

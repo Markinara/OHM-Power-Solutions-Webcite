@@ -1,3 +1,10 @@
+<?php
+session_start();
+$is_admin = isset($_SESSION["is_admin"]) && $_SESSION["is_admin"] === true;
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -16,10 +23,12 @@
         
         <div class="navbar">
             <ul class="ul">
-                <li class="li"><a class="a" href="HomePage.HTML">Home |</a></li>
+                <li class="li"><a class="a" href="home_page.php">Home |</a></li>
                 <li class="li"><a class="a" href="products.php">Products |</a></li>
                 <li class="li"><a class="a" href="cart.php">Cart |</a></li>
-                <li class="li"><a class="a" href="admin.php">Admin |</a></li>
+                <?php if ($is_admin): ?>
+                    <li class="li"><a class="a" href="admin.php">Admin |</a></li>
+                <?php endif; ?>
                 <li class="li"><a class="a" href="index.HTML">Log Out</a></li>
             </ul>
             <div class="search-container">
@@ -31,7 +40,6 @@
 
     <div class="wrapper">
         <?php
-        session_start();
 
         // Database connection parameters
         $servername = "localhost";

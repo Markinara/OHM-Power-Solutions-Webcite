@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             if ($is_admin) {
                                 header("location: admin.php");
                             } else {
-                                header("location: HomePage.HTML");
+                                header("location: home_page.php");
                             }
                             exit;
                         } else {

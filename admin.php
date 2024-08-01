@@ -16,7 +16,7 @@
         
         <div class="navbar">
             <ul class="ul">
-                <li class="li"><a class="a" href="HomePage.HTML">Home |</a></li>
+                <li class="li"><a class="a" href="home_page.php">Home |</a></li>
                 <li class="li"><a class="a" href="products.php">Products |</a></li>
                 <li class="li"><a class="a" href="cart.php">Cart |</a></li>
                 <li class="li"><a class="a" href="admin.php">Admin |</a></li>

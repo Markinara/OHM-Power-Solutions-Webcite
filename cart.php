@@ -1,3 +1,11 @@
+<?php
+session_start();
+$is_admin = isset($_SESSION["is_admin"]) && $_SESSION["is_admin"] === true;
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -17,10 +25,12 @@
         
         <div class="navbar">
             <ul class="ul">
-                <li class="li"><a class="a" href="HomePage.HTML">Home |</a></li>
+                <li class="li"><a class="a" href="home_page.php">Home |</a></li>
                 <li class="li"><a class="a" href="products.php">Products |</a></li>
                 <li class="li"><a class="a" href="cart.php">Cart |</a></li>
-                <li class="li"><a class="a" href="admin.php">Admin |</a></li>
+                <?php if ($is_admin): ?>
+                    <li class="li"><a class="a" href="admin.php">Admin |</a></li>
+                <?php endif; ?>
                 <li class="li"><a class="a" href="index.HTML">Log Out</a></li>
             </ul>
             <div class="search-container">
@@ -32,7 +42,6 @@
 
     <div class="wrapper">
         <?php
-        session_start();
 
         // Database connection parameters
         $servername = "localhost";
@@ -63,7 +72,7 @@
             $stmt_remove->bind_param("ii", $user_id, $product_id);
 
             if ($stmt_remove->execute()) {
-                echo "Item successfully removed from database.<br>";
+                header("location: products.php");
             } else {
                 echo "Error: " . $stmt_remove->error . "<br>";
             }
@@ -133,14 +142,17 @@
         ?>
 
         <!-- Display total price at the bottom of the page -->
-        <footer>
+        <footer class="footer2">
             <?php if (!empty($_SESSION['cart'])): ?>
                 <div class="price">
                     <h2 class="h3">Total Price: $<?php echo number_format($total_price, 2); ?></h2>
                 </div>
 
-                <form action="" method="post" class="bd">
-                    <button type="submit" class="buy">Buy Now</button>
+                <form action="process_purchase.php" method="post" class="bd">
+                    <?php foreach ($_SESSION['cart'] as $prod_code =>$quantity): ?>
+                        <input type="hidden" name="products[<?php echo htmlspecialchars($prod_code); ?>]" value="<?php echo htmlspecialchars($quantity); ?>">
+                        <button type="submit" class="buy">Buy Now</button>
+                    <?php endforeach; ?>
                 </form>
             <?php endif; ?>
         </footer>

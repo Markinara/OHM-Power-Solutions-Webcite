@@ -56,17 +56,3 @@ function deleteItem(prod_code) {
     }
 }
 
-function adminCheck(isAdmin) {
-    fetch('userinfo.php', {
-        method: 'GET',
-        body: isAdmin
-    })
-
-    .then(response => response.text())
-    .then(result => {
-        if(result.equals('0'))
-            alert('You are not an admin. Access denied.');
-        else
-            location('admin.php');
-    });
-}

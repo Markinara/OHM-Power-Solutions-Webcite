@@ -238,6 +238,7 @@ body {
     border-radius: 5px;
 }
 
+
 /* Styling for card wrapper */
 /* Styling for card wrapper */
 .wrapper {
@@ -387,8 +388,8 @@ body {
 }
 
 footer {
-    text-align: right; /* Center the text inside the footer */
-    margin-top: 20px;  /* Space above the footer */
+    text-align: center; /* Center the text inside the footer */
+    margin-top: 60px;  /* Space above the footer */
     padding: 10px;     /* Padding for aesthetics */
     background-color: #27ba38; /* Optional background color */
     position: relative; /* Ensure relative positioning */
@@ -439,6 +440,7 @@ footer {
     border: none;
     background-color: #fff;
 }
+
 .buy{
     background-color: rgb(39, 186, 56);
     color: #fff;
@@ -712,4 +714,28 @@ form input[type="submit"]:hover {
     font-size: x-large;
     color: #27ba38;
     margin-top: 20%;
+}
+
+.button2 {
+    background-color: rgb(39, 186, 56);
+    color: #fff;
+    border: none;
+    padding: 8px 15px; /* Adjust padding to make the button smaller */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.8em; /* Adjust font-size to make the button text smaller */
+    text-align: center;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.bd2 {
+    display: flex; /* Use flexbox to center the price */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+    margin-top: 10px; /* Space above the price */
+    width: 150px;
+    border: none;
 }
